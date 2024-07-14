@@ -2,13 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import LeftNav from "./pages/shared/LeftNav";
 import Register from "./pages/Register";
-import { useState } from "react";
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import AuthorList from "./pages/authors/AuthorList";
 import Error from "./pages/shared/Error";
 import Registered from "./pages/Registered";
+import BookList from './pages/books/BookList';
 function App() {
   return (
     <div className="App">
@@ -23,6 +23,7 @@ function App() {
             <Route path="edit" element={<AuthorList />} />
             <Route path="detail/:id" element={<AuthorList />} />
           </Route>
+          <Route path="/books" element={<BookList />} />
           <Route path="/register" element={<Register />} />
           <Route path="/registered" element={<Registered />} />
           <Route path="/login" element={<Login />} />
