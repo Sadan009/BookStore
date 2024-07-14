@@ -55,7 +55,7 @@ export default function Pagination(Props) {
     return (
         <nav>
             <div className="row">
-                <div className="col-md-3 flex-items">
+                <div className="col-md-4 flex-items">
                     Page {data?.currentPage} of {data?.totalPages}.
 
                     <select value={data?.pageSize} className="form-select page-size" onChange={handlePageSizeChange}>
