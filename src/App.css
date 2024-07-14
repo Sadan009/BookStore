@@ -12,3 +12,14 @@
   flex: 200px 1;
   margin: 20px 30px;
 }
+.page-item {
+  cursor: pointer;
+}
+.flex-items {
+  display: flex;
+}
+.page-size{
+  margin-left: 20px;
+  width: auto !important;
+  height: 40px;
+}

@@ -8,6 +8,7 @@
     color: #aaffff;
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 .left-nav > .heading {
     font-size: 30px;

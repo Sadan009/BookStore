@@ -17,6 +17,7 @@ export default function LeftNav(){
           <NavLink to="/publishers">Publishers</NavLink>
           <NavLink to="/books">Books</NavLink>
           <NavLink to="/stores">Stores</NavLink>
+          <NavLink to="/users">Users</NavLink>
 
           <div className="login">
             <p className="user-image">
