@@ -53,6 +53,7 @@ export default function Pagination(Props) {
 
       
     return (
+        data?.totalPages <= 0? null:
         <nav>
             <div className="row">
                 <div className="col-md-4 flex-items">

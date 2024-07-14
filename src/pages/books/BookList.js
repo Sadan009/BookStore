@@ -67,39 +67,44 @@ export default function BookList() {
             </div>
 
             {/* Table */}
-            <table className="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Rating</th>
-                        <th>Pages</th>
-                        <th>Published</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {
-                    books?.records?.map((book) => 
-                       <tr key={book.id}>
-                            <td>{book.id}</td>
-                            <td>{book.name}</td>
-                            <td>{book.price}</td>
-                            <td>{book.rating}</td>
-                            <td>{book.pages}</td>
-                            <td>{book.pubDate}</td>
-                            <td>
-                                <i className="bi bi-pencil-square text-primary" ></i>
-                                &nbsp;&nbsp;&nbsp;
-                                <i className="bi bi-trash3 text-danger"></i>
-                            </td>
+            {
+                books?.totalPages <= 0? <div class="alert alert-warning h6" role="alert">No Record Found!</div> :
+                
+                <table className="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Rating</th>
+                            <th>Pages</th>
+                            <th>Published</th>
+                            <th>Action</th>
                         </tr>
-                    )
-                }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    {
+                        books?.records?.map((book) => 
+                        <tr key={book.id}>
+                                <td>{book.id}</td>
+                                <td>{book.name}</td>
+                                <td>{book.price}</td>
+                                <td>{book.rating}</td>
+                                <td>{book.pages}</td>
+                                <td>{book.pubDate}</td>
+                                <td>
+                                    <i className="bi bi-pencil-square text-primary" ></i>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <i className="bi bi-trash3 text-danger"></i>
+                                </td>
+                            </tr>
+                        )
+                    }
+                    </tbody>
+                </table>
+            }
             <Pagination data={books} onPageChange={handlePageChange} onSizeChange={handlePageSizeChange} />
+            
         </div>
     )
 }
