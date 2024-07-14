@@ -1,0 +1,14 @@
+
+.App 
+{
+  display: flex;
+  align-items: stretch;
+}
+.App > .leftMenu {
+  
+  flex: 200px 0 0;
+}
+.App > .content {
+  flex: 200px 1;
+  margin: 20px 30px;
+}

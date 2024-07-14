@@ -1,0 +1,46 @@
+
+.left-nav{
+    width: 180px;
+    border-right: 1px solid #444;
+    height: 100vh;
+    padding: 15px 0 20px 0;
+    background-color: #000;
+    color: #aaffff;
+    display: flex;
+    flex-direction: column;
+}
+.left-nav > .heading {
+    font-size: 30px;
+    border-bottom: 1px dotted #555;
+}
+.left-nav > div.links{
+    display: flex;
+    flex-direction: column;
+    height: 99vh;
+}
+.left-nav > div.links> a:link,
+.left-nav > div.links> a:visited,
+.left-nav > div.links> a:active{
+
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dotted #555;
+    padding: 10px;
+}
+.left-nav > div.links> a.active{
+    background-color: #444;
+}
+.left-nav > div.links> div.login{
+    align-self: center;
+    margin-top: auto;
+}
+.left-nav > div.links> div.login a:link,
+.left-nav > div.links> div.login a:active,
+.left-nav > div.links> div.login a:visited{
+    color: rgb(82, 152, 15);
+    text-decoration: none;
+}
+.user-image {
+    text-align: center;
+}
